@@ -18,7 +18,7 @@ public class Constants {
 	public static final String PHONE = "phone";
 	public static final String EMAIL = "email";
 	public static final String APPROVED = "isApproved";
-	public static final String AWS_ACCESS_KEY = "AKIAJB6XAQ7PJSDTGGLQ";
-	public static final String AWS_SECRET_KEY = "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";
+	public static final String AWS_ACCESS_KEY = "AKIAJ63JZ4NZJSSYN4FA";
+	public static final String AWS_SECRET_KEY = "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";
 	public static final String S3_REGION = "us-east-2";
 }
