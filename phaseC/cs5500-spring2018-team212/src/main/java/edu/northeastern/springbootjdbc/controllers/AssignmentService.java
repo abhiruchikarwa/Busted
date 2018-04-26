@@ -124,7 +124,7 @@ public class AssignmentService {
 				PersonDao personDao = PersonDao.getInstance();
 				mail.send("^EjHs0R4&wot", personDao.findPersonById(studentID).getEmail(),
 						  "Plagiarism Detected for " + studentID,
-						  "Report can be found at http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200/user/website/" + courseID + "/page/" + r1.getAssignment2ID() + "/report/" + reportID,
+						  "Report can be found at http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200/user/website/" + courseID + "/page/" + r1.getAssignment2ID() + "/report/" + reportID,
 						  System.getProperty("user.dir")+"/config.properties");
 			}
 		}
@@ -163,7 +163,7 @@ public class AssignmentService {
 			@RequestParam("courseid") int courseID, @RequestParam("githublink") String githublink
 	 * @return
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/assignment/uploadGit", method = RequestMethod.POST)
 	public @ResponseBody int uploadGit(@RequestBody String json) {
 		//change this as an input from user 
@@ -208,7 +208,7 @@ public class AssignmentService {
 	 * @return
 	 * @throws JsonProcessingException 
 	 */ 	
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/{userid}/course/{courseId}/assignment", method = RequestMethod.GET)
 	public @ResponseBody List<Assignment> getAssignments(@PathVariable("userid") int profid, @PathVariable("courseId") int courseid) throws JsonProcessingException {
 		AssignmentDao adao = AssignmentDao.getInstance();
@@ -221,7 +221,7 @@ public class AssignmentService {
 	 * @return
 	 * @throws JsonProcessingException 
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/course/assignment/{assignmentId}", method = RequestMethod.GET)
 	public @ResponseBody Assignment getAssignmentById(@PathVariable("assignmentId") int assignmentId) {
 		AssignmentDao adao = AssignmentDao.getInstance();
@@ -235,7 +235,7 @@ public class AssignmentService {
 	 * @param hwName
 	 * @return
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/course/{courseid}/assignment/{hwName}", method = RequestMethod.GET)
 	public @ResponseBody List<Assignment> getSubmissions(@PathVariable("courseid") int courseid, @PathVariable("hwName") String hwName) {
 		AssignmentDao adao = AssignmentDao.getInstance();
@@ -249,7 +249,7 @@ public class AssignmentService {
 	 * @param hwName
 	 * @return
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/course/{courseid}/assignment/{hwName}/user/{useId}", method = RequestMethod.GET)
 	public @ResponseBody List<Assignment> getSubmissions(@PathVariable("courseid") int courseid, @PathVariable("hwName") String hwName,
 			@PathVariable("useId") int studentid) {
@@ -264,7 +264,7 @@ public class AssignmentService {
 	 * @param hwName
 	 * @return
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/assignment/new", method = RequestMethod.POST)
 
 	public @ResponseBody int createAssignmentForProfessor(@RequestBody String payload) {
@@ -305,7 +305,7 @@ public class AssignmentService {
 	 * @return the number of rows affected - indicating whether operation was
 	 *         successful.
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value="/api/course/assignment/{assignmentId}", method=RequestMethod.DELETE)
 	public @ResponseBody int deleteAssigment(@PathVariable("assignmentId") int assignmentId) {
 		AssignmentDao adao = AssignmentDao.getInstance();
@@ -319,7 +319,7 @@ public class AssignmentService {
 	 *         successful.
 	 * @throws JSONException 
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/assignment/{assignmentId}", method = RequestMethod.PUT)
 	public @ResponseBody int updateAssignment(@PathVariable("assignmentId") int assignId,@RequestBody String json) throws JSONException {
 		AssignmentDao adao = AssignmentDao.getInstance();
@@ -355,7 +355,7 @@ public class AssignmentService {
 	 * @param assignmentid1
 	 * @param assignmentid2
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping(value = "/api/assignment/individual/{assignmentid1}/{assignmentid2}/{language}",
 	method = RequestMethod.GET)
 	public @ResponseBody void testIndividual(@PathVariable("assignmentid1") int assignmentid1,
@@ -401,7 +401,7 @@ public class AssignmentService {
 				SendMailSSL mail = new SendMailSSL();
 				mail.send("^EjHs0R4&wot", "team212updates@gmail.com",
 						"Plagiarism Detected for " + 1,
-						"Report can be found at http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200/user/website/" + c1.getId() + "/page/" + r1.getAssignment2ID() + "/report/" + reportID,
+						"Report can be found at http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200/user/website/" + c1.getId() + "/page/" + r1.getAssignment2ID() + "/report/" + reportID,
 						System.getProperty("user.dir")+"/config.properties");
 			}
 		}

@@ -33,7 +33,7 @@ public class ReportService {
 	 * Create a report
 	 * @return the number of rows affected after report created
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping("/api/report/{courseid}/get/{hwName}")
 	public @ResponseBody List<Report> getReports(@PathVariable int courseid, @PathVariable String hwName) {
 		ReportDao dao = ReportDao.getInstance();
@@ -43,7 +43,7 @@ public class ReportService {
 	/** Get Report By ID
 	 * @return the number of rows affected after report created
 	 */
-	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200"})
+	@CrossOrigin(origins = {"http://localhost:4200", "http://ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200"})
 	@RequestMapping("/api/report/{reportid}")
 	public @ResponseBody Report getReportById(@PathVariable int reportid) {
 		ReportDao dao = ReportDao.getInstance();
