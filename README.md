@@ -5,13 +5,13 @@ Paarth Kotak, Abhiruchi Karwa, Ke 'Conan' Xuan and Sirushti Murugesan
 
 ---
 ## Link to the live system
-Our website is available here at : [BUSTED](http://ec2-18-222-88-122.us-east-2.compute.amazonaws.com:4200/)
+Our website is available here at : [BUSTED](ec2-18-188-212-155.us-east-2.compute.amazonaws.com:4200/)
 
 ---
 ## Links to YouTube videos
-1. [System Demo](https://www.youtube.com/edit?o=U&video_id=ZFCSSX5JoZA)
-2. [System Setup](https://www.youtube.com/edit?o=U&video_id=rrRy7xB2lGo) 
-3. [Final Presentation](https://www.youtube.com/edit?o=U&video_id=KsDt0EgWY0k)
+1. [System Demo](https://www.youtube.com/watch?v=ZFCSSX5JoZA)
+2. [System Setup](https://www.youtube.com/watch?v=rrRy7xB2lGo) 
+3. [Final Presentation](https://www.youtube.com/watch?v=KsDt0EgWY0k)
 
 ---
 ## Pre-requisites
